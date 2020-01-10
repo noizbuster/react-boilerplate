@@ -1,0 +1,29 @@
+parser: "babel-eslint"
+
+env:
+  browser: true
+  node: true
+  jest: true
+
+extends:
+  - "airbnb"
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "prettier"
+  - "prettier/react"
+
+# See more details about eslint configuration for react
+# https://github.com/yannickcr/eslint-plugin-react#configuration
+settings:
+  react:
+    version: "detect"
+
+rules:
+  react/jsx-filename-extension: "off"
+  max-len: ["warn", {"code": 100}]
+  prefer-promise-reject-errors: ["off"]
+  react/prop-types: ["warn"]
+  no-return-assign: ["off"]
+  jsx-a11y/anchor-is-valid: "warn"
+  no-param-reassign: "warn"
+  no-unused-vars: "warn"
